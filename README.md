@@ -1,10 +1,12 @@
 # 340_BaseVersion
-This repository will serve as base setup for future activites in this class.
+This repository will serve as base setup for one/more of the future activites in this class.
 This project utilizes Webstorm IDE and emulates a client-server model, and is created using ReactJS and NodeJS.
-Although the project is a little heavy on the Javascripting side, the majority of the focus will be done on understanding the databases in HTML. 
+Although the project is a little heavy on the Javascripting side, the majority of the focus will be done on understanding the databases in client/server model. 
 The IDE, will run a localhost server, which we will then use to start a HTML webpage. The client (HTML) will be retrieving data from the server (JS files), which stores the data in RDMBS format.
+In our case, both the client and the server are on the same machine.
 
-Steps to follow, everyone should do the following (except for #3, which will be done only time one per group):
+Steps to follow, everyone should do the following (except for #3, which will be done only once one per group and by only one member in the group):
+
 
 1. Install Webstorm IDE.
 2. Clone this repository on your machine.
