@@ -8,7 +8,7 @@ Steps to follow, everyone should do the following (except for #3, which will be 
 
 1. Install Webstorm IDE.
 2. Clone this repository on your machine.
-3. One member in the group will create your a Github repository for the group and add collaborators. Make sure to add the instructor as well to your Github repo. Your github repo should be a private repository.
+3. One member in the group will create your a Github repository for the group and add collaborators. Make sure to add the instructor as one of the collaborator to your Github repo. Your github repo should be a private repository.
 4. Insall Node.js software - https://nodejs.org/en/download
 5. Open the cloned repository in Webstorm.
 6. Highly likely that there are going to be several errors in the project as the respective libraries need to be downloaded from npm.
