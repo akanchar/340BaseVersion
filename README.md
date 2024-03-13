@@ -20,4 +20,4 @@ Steps to follow, everyone should do the following (except for #3, which will be 
 10. Click on that weblink and it shoud display the HTML page.
 11. The HTML page doesn't include anything in the base version, apart from one single button. Upon clicking the button in the HTML page, the results of the query should be displayed.
 12. The base version assumes that there is a Database called ADVENTURER and a table called ARTIFACTS in your SQL.
-13. **IMPORTANT** Make sure to give your own password that you used to connect to the SQL database.
+13. **IMPORTANT** Make sure to give your own password that you used to connect to the SQL database, do some hunting to find out where to enter the password. Get to know the files in general.
