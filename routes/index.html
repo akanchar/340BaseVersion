@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../public/stylesheets/cryptoRateMixStyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../public/javascripts/cryptoRateMixScript.js"></script>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Quicksand"/>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.3.0/snap.svg-min.js'></script>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <title>Crypto Solutions and Optimization (Crypto S&O)</title>
+</head>
+<body class="p backgroundColors">
+<!--<button onclick="test()">Change color</button>-->
+<h1 class=" p pure-button fuller-button red" style="font-size: 2em">Crypto Solutions and Optimization (Crypto S&O)</h1>
+
+<p class="pure-button fuller-button red">0.1. "on-/off-blockchain interface": "url", "data file", "computation"</p>
+
+<p>
+    <button class="pure-button fuller-button white" onclick="showAll()">View all</button>
+    <button class="pure-button fuller-button white"  onclick="hideAll()">Hide all</button>
+
+</p>
+<p>
+    <button onclick="myFunction011()" class="pure-button fuller-button blue" >
+        0.1.1. "users/developers manual about the interface and crypto rate/mix control"
+        posted (charge)
+    </button>
+<div id="myDIV011" class="colors" style="display: none">
+    <a href="https://drive.google.com/open?id=13EiW2WgIAncOJnBns6UltKe5i7muzRJ7" target="_blank">Manual to start all interfaces(Hadoop, IPFS, Truffle)</a>
+    <br/>
+    <a href="https://drive.google.com/open?id=1-AkArlj3wTT_7gXHh0GEYmkHJct0ft_0" target="_blank">Manual to post in HTML page</a>
+
+
+</div>
+</p>
+<p>
+    <button onclick="myFunction0111()" class="pure-button fuller-button blue">0.1.1.1. "show the algorithm" (charge, see 2.0 or 3.0 options)
+    </button>
+<div id="myDIV0111" class="colors" style="display: none">
+    Show the algorithm here
+</div>
+</p>
+
+<p>
+    <button onclick="myFunction0112()" class="pure-button fuller-button blue">0.1.1.2. "show the source code" (charge, see 2.0 or 3.0 options)</button>
+<div id="myDIV0112" class="colors" style="display: none">
+    Show source code here
+</div>
+</p>
+
+<p>
+    <button onclick="myFunction0113()" class="pure-button fuller-button blue">0.1.1.3. "contribute a new algorithm (reward)</button>
+<div id="myDIV0113" class="colors" style="display: none">
+    Contribute algorithm here
+</div>
+</p>
+
+<p>
+    <button onclick="myFunction0114()" class="pure-button fuller-button blue">0.1.1.4. "contribute a new source code (reward)</button>
+<div id="myDIV0114" class="colors" style="display: none">
+    Contribute source code here
+</div>
+</p>
+
+<!--<p>-->
+<!--<button onclick="myFunction012()">0.1.2. "show current blockchain status"</button>-->
+<!--<div id="myDIV012" class="colors" style="display: none">-->
+
+<!--Show current blockchain status here-->
+<!--</div>-->
+</p>
+
+<!--<button id="btnsave" onclick="fncsave()">Save</button>-->
+<!--<form target="myIframe" action="http://localhost/executeURLFunction" method="post">-->
+<!--<input type="hidden" value="someval" />-->
+<!--<input type="submit">-->
+<!--</form>-->
+
+<!--<iFrame src="" name="myIframe"></iFrame>-->
+
+
+<p>
+    <button onclick="myFunction013()" class="pure-button fuller-button blue">0.1.2. "upload a smart contract to demo (66% Crypto and rest Non-Crypto)"</button>
+<div id="myDIV013" class="colors" style="display: none; text-align: left">
+    <pre>
+pragma solidity 0.4.24;
+contract ThreeCrypto66 {
+    string public dataurl;
+    string public url;
+    string public functionality;
+    string public wolframFunctionality;
+    string public computationAnswer;
+    string public computation;
+    string public httpsResult;
+    string public dataResult;
+
+
+    //https function
+    function gethttps(string _functionality, string _url) public {
+        functionality = _functionality;
+        url = _url;
+    }
+    function sethttps(string _result) public {
+        httpsResult = _result;
+    }
+
+    // Data files
+    function getData(string _functionality, string _dataurl) public {
+        functionality = _functionality;
+        dataurl = _dataurl;
+    }
+    function setData(string _dataResult) public {
+        dataResult = _dataResult;
+    }
+
+    // Wolfram alpha function
+    function computationFunction(string _wolframFunctionality, string _computation) public {
+        wolframFunctionality = _wolframFunctionality;
+        computation = _computation;
+    }
+    function wolfset(string _computationAnswer) public {
+        computationAnswer = _computationAnswer;
+    }
+}
+</pre>
+</div>
+
+<p>
+    <button onclick="myFunction014()" class="pure-button fuller-button blue" >0.1.3. "execute a transaction for a url access" -> "show updated blockchain status
+        with results post back in"
+    </button>
+<div id="myDIV014" class="colors" style="display: none">
+    <label>
+        <textarea id="executeURLTextArea" style="width: 600px" placeholder="Enter URL here"></textarea>
+    </label>
+    <br/>
+    <button onclick="executeURL()">Execute URL Access through blockchain</button>
+    <!--<button onclick="resetHttpsVariable()">Clear</button>-->
+    <br/>
+
+
+    <label>
+        <textarea readonly style="width: 200px; height: 50px">Input posted transaction</textarea>
+        <a id="executeHttpHashTextAreaHref" href="#" target="_blank"><textarea
+                id="executeHttpHashTextArea" style="width: 600px; height: 50px"></textarea></a>
+    </label>
+    <br/>
+    <label>
+        <textarea readonly style="width: 200px; height: 50px">Result posted transaction</textarea>
+        <a id="executeHttpResultHashTextAreaHref" href="#" target="_blank"><textarea
+                id="executeHttpResultHashTextArea" style="width: 600px; height: 50px"></textarea></a>
+    </label>
+    <br/>
+    <label>
+        <textarea readonly style="width: 200px; height: 50px">Posted value in blockchain</textarea>
+        <textarea id="executeResultRetrievalHttpTextArea" style="width: 600px; height: 50px"
+                  placeholder="Result of the variable in the blockchain."></textarea>
+    </label>
+    <br/>
+    <!--<button onclick="executeResultRetrievalHttp()">Retrieve result from Blockchain-->
+    <!--</button>-->
+    <br/>
+</div>
+
+</p>
+<p>
+    <button onclick="myFunction015()" class="pure-button fuller-button blue">0.1.4. "execute a transaction for a data file access" -> "show updated blockchain
+        status with results post back in"
+    </button>
+<div id="myDIV015" class="colors" style="display: none">
+    <label>
+        <textarea id="executeDataTextArea" style="width: 600px" placeholder="Enter URL containing file here"></textarea>
+    </label>
+    <br/>
+    <button onclick="executeDataURL()">Execute Data Access through blockchain</button>
+    <!--<button onclick="resetDataVariable()">Clear</button>-->
+    <br/>
+    <label>
+        <textarea readonly style="width: 200px; height: 50px">Input posted transaction</textarea>
+        <a id="executeDataHashTextAreaHref" href="#" target="_blank"><textarea
+                id="executeDataHashTextArea" style="width: 600px; height: 50px"></textarea></a>
+    </label>
+    <br/>
+    <label>
+        <textarea readonly style="width: 200px; height: 50px">Result posted transaction</textarea>
+        <a id="executeDataResultHashTextAreaHref" href="#" target="_blank"><textarea
+                id="executeDataResultHashTextArea" style="height: 50px; width: 600px;"></textarea></a>
+    </label>
+    <br/>
+    <label>
+        <textarea readonly style="width: 200px; height: 50px">Posted value in blockchain</textarea>
+        <textarea id="executeResultRetrievalDataTextArea" style="width: 600px; height: 50px"
+                  placeholder="Result of the variable in the blockchain."></textarea>
+    </label>
+    <br/>
+    <!--<button onclick="executeResultRetrievalURL()">Retrieve result from Blockchain-->
+    <!--</button>-->
+    <br/>
+</div>
+</p>
+<p id="demo"></p>
+
+<p>
+    <button onclick="myFunction016()" class="pure-button fuller-button blue">0.1.5. "execute a transaction for a computation access" -> "show updated
+        blockchain status with results post back in""
+    </button>
+<div id="myDIV016" class="colors" style="display: none">
+    <label>
+        <textarea id="executeComputationTextArea" style="width: 600px"
+                  placeholder="Enter any computation here in string format"></textarea>
+    </label>
+    <br/>
+    <button onclick="executeComputation()">Execute Computation through blockchain</button>
+    <!--<button onclick="resetComputationVariable()">Clear</button>-->
+    <br/>
+    <label>
+        <textarea readonly style="width: 200px; height: 50px">Input posted transaction</textarea>
+        <a id="executeComputationHashTextAreaHref" href="#" target="_blank"><textarea
+                id="executeComputationHashTextArea" style="width: 600px; height: 50px"></textarea></a>
+    </label>
+    <br/>
+    <label>
+        <textarea readonly style="width: 200px; height: 50px">Result posted transaction</textarea>
+        <a id="executeComputationResultHashTextAreaHref" href="#" target="_blank"><textarea
+                id="executeComputationResultHashTextArea" style="width: 600px; height: 50px"></textarea></a>
+    </label>
+    <br/>
+    <label>
+        <textarea readonly style="width: 200px; height: 50px">Posted value in blockchain</textarea>
+        <textarea id="executeResultRetrievalComputationTextArea" style="width: 600px; height: 50px"
+                  placeholder="Result of the variable in the blockchain."></textarea>
+    </label>
+    <br/>
+    <!--<button onclick="executeResultRetrievalComputation()">Retrieve result from Blockchain-->
+    <!--</button>-->
+    <br/>
+</div>
+
+</p>
+
+<p  class="pure-button fuller-button red">
+    0.2. "blockchain analytics engine": "blockchain download", "hadoop-based analytics", "ipfs-based crypto-link
+    blockchain-posting""
+</p>
+<p>
+    <button onclick="show02All()" class="pure-button fuller-button white">View all</button>
+    <button onclick="hide02All()" class="pure-button fuller-button white">Hide all</button>
+</p>
+<!--<p>-->
+<!--<button onclick="myFunction02()">0.2. "blockchain analytics engine": "blockchain download", "hadoop-based analytics", "ipfs-based crypto-link blockchain-posting""</button>-->
+<!--<div id="myDIV02" class="colors" style="display: none">-->
+
+<!--</div>-->
+<!--</p>-->
+
+<p>
+    <button onclick="myFunction021()" class="pure-button fuller-button blue">0.2.1. "users/developers manual about the interface to the analytics engine for
+        blockchain downloading/" posted (charge, see 2.0 or 3.0 options)"
+    </button>
+<div id="myDIV021" class="colors" style="display: none">
+    <a href="https://drive.google.com/open?id=1Y2ZKmrZoOmCkAUQHU4f3F9NcYx2kn-e-" target="_blank">Manual for Blockchain</a>
+</div>
+</p>
+
+<p>
+    <button onclick="myFunction0211()" class="pure-button fuller-button blue">0.2.1.1. "show the algorithm" (charge, see 2.0 or 3.0 options)</button>
+<div id="myDIV0211" class="colors" style="display: none">
+    Algorithm to be posted here.
+</div>
+</p>
+
+<p>
+    <button onclick="myFunction0212()" class="pure-button fuller-button blue">0.2.1.2. "show the source code" (charge, see 2.0 or 3.0 options)</button>
+<div id="myDIV0212" class="colors" style="display: none">
+ Source code to be posted here.
+</div>
+</p>
+
+<p>
+    <button onclick="myFunction0213()" class="pure-button fuller-button blue">0.2.1.3. "contribute a new algorithm (reward)</button>
+<div id="myDIV0213" class="colors" style="display: none">
+    New algorithm can be contributed here.
+</div>
+</p>
+<p>
+    <button onclick="myFunction0214()" class="pure-button fuller-button blue">0.2.1.4. "contribute a new source code (reward)</button>
+<div id="myDIV0214" class="colors" style="display: none">
+    New source code can be contributed here.
+</div>
+</p>
+
+<!--<p>-->
+<!--<button onclick="myFunction022()">0.2.2. "show current blockchain status"</button>-->
+<!--<div id="myDIV022" class="colors" style="display: none">-->
+
+<!--</div>-->
+<!--</p>-->
+<p>
+    <button onclick="myFunction023()" class="pure-button fuller-button blue">0.2.2. "Request for blockchain analytics"</button>
+<div id="myDIV023" class="colors" style="display: none">
+    <button onclick="blockchainAnalytics()">Start</button>
+    <br/>
+    <label>
+        <a id="ipfsHashCodeHref" href="#" target="_blank">
+            <textarea id="ipfsHashCode" style="width: 550px">
+            </textarea>
+        </a>
+    </label>
+</div>
+<!--</p>-->
+<!--<p>-->
+<!--<button onclick="myFunction023()">0.2.3. "download current blockchain"</button>-->
+<!--<div id="myDIV023" class="colors" style="display: none">-->
+
+<!--</div>-->
+<!--</p>-->
+<!--<p>-->
+<!--<button onclick="myFunction024()">0.2.4. "upload blockchain into hadoop"</button>-->
+<!--<div id="myDIV024" class="colors" style="display: none">-->
+
+<!--</div>-->
+<!--</p>-->
+<!--<p>-->
+<!--<button onclick="myFunction025()">0.2.5. "perform analytics on the file"</button>-->
+<!--<div id="myDIV025" class="colors" style="display: none">-->
+
+<!--</div>-->
+<!--</p>-->
+<!--<p>-->
+<!--<button onclick="myFunction026()">0.2.6. "store output report and generate crypto link(s)"</button>-->
+<!--<div id="myDIV026" class="colors" style="display: none">-->
+
+<!--</div>-->
+<!--</p>-->
+<!--<p>-->
+<!--<button onclick="myFunction027()">0.2.7. "post crypto link(s) back in blockchain"</button>-->
+<!--<div id="myDIV027" class="colors" style="display: none">-->
+
+<!--</div>-->
+<!--<p>-->
+    <!--<button onclick="myFunction028()" class="pure-button fuller-button blue">0.2.3. "Check IPFS code and access the IPFS file"</button>-->
+<!--<div id="myDIV028" class="colors" style="display: none">-->
+    <!--IPFS hashcode is posted here.-->
+<!--</div>-->
+
+
+<p class="chapters"></p>
+<p class="chapters"></p>
+<p class="chapters pure-button fuller-button red">
+    1. "service selection"
+</p>
+<p  class="pure-button fuller-button white">1.1. "legacy code to crypto code conversion service"</p>
+<!--<p>-->
+<!--<button onclick="myFunction011()">1.1. "legacy code to crypto code conversion service" (charge, see 2.0 or 3.0-->
+<!--options)-->
+<!--</button>-->
+<!--<div id="myDIV11" class="colors" style="display: none">-->
+
+<!--</div>-->
+
+<p>
+    <button onclick="myFunction111()" class="pure-button fuller-button blue">1.1.1. "input": legacy code uploaded on the platform</button>
+<div id="myDIV111" class="colors" style="display: none">
+    Show the legacy code to be deployed to blockchain here.
+</div>
+
+<p>
+    <button onclick="myFunction112()" class="pure-button fuller-button blue">1.1.2. "output": crypto code stored back on the platform</button>
+<div id="myDIV112" class="colors" style="display: none">
+    Crypto code will be displayed here.
+</div>
+<p  class="pure-button fuller-button white">1.2. "Crypto code development" (charge, see 2.0 or 3.0 options)</p>
+<!--<p>-->
+<!--<button onclick="myFunction12()">1.2. "crypto code development" (charge, see 2.0 or 3.0 options)</button>-->
+<!--<div id="myDIV12" class="colors" style="display: none">-->
+<!--</div>-->
+
+<p>
+    <button onclick="myFunction121()" class="pure-button fuller-button blue">1.2.1. "input": specification and algorithm</button>
+<div id="myDIV121" class="colors" style="display: none">
+    Specifications and algorithms displayed here
+</div>
+
+<p>
+    <button onclick="myFunction122()" class="pure-button fuller-button blue">1.2.2. "output": optimized crypto code</button>
+<div id="myDIV122" class="colors" style="display: none">
+    Optimized Crypto code will be displayed here
+</div>
+<p  class="pure-button fuller-button white">1.3. "crypto code optimization service" (free if code developed by us, otherwise
+    charge, see 2.0 or 3.0 options)</p>
+<!--<p>-->
+<!--<button onclick="myFunction13()">1.3. "crypto code optimization service" (free if code developed by us, otherwise-->
+<!--charge, see 2.0 or 3.0 options)-->
+<!--</button>-->
+<!--<div id="myDIV13" class="colors" style="display: none">-->
+
+<!--</div>-->
+<p>
+    <button onclick="myFunction131()" class="pure-button fuller-button blue">1.3.1. "upload" a smart contract (100% Crypto) on the testnet</button>
+<div id="myDIV131" class="colors" style="display: none">
+    Uploaded smart contract is displayed here.
+</div>
+<p>
+    <button onclick="myFunction132()" class="pure-button fuller-button blue">1.3.2. Manage Crypto Rate/Mix</button>
+<div id="myDIV132" class="colors" style="display: none">
+    Generate possible combinations of Crypto and Non-Crypto combinations each of which to demonstrate a crypto rate/mix.
+    Refer to 1.3.4.
+</div>
+<!--<p>-->
+<!--<button onclick="myFunction132()">1.3.2. "function" selection from the smart contract</button>-->
+<!--<div id="myDIV132" class="colors" style="display: none">-->
+
+<!--</div>-->
+<!--<p>-->
+<!--<button onclick="myFunction133()">1.3.3. "crypto rate/mix control" with 2 different options:</button>-->
+<!--<div id="myDIV133" class="colors" style="display: none">-->
+
+<!--</div>-->
+<!--<p>-->
+<!--<button onclick="myFunction1330()">1.3.3.0. "users/developers manual about the interface and crypto rate/mix-->
+<!--control" posted-->
+<!--</button>-->
+<!--<div id="myDIV1330" class="colors" style="display: none">-->
+
+<!--</div>-->
+<!--<p>-->
+<!--<button onclick="myFunction1331()">1.3.3.1. "platform controlled options": click on this then the platform generates-->
+<!--meaningful crypto rate/mix's to execute the transaction of selection-->
+<!--</button>-->
+<!--<div id="myDIV1331" class="colors" style="display: none">-->
+<!--</div>-->
+<!--<p>-->
+<!--<button onclick="myFunction1332()">1.3.3.2. "custom control": click on this then the platform provides an-->
+<!--"interface" for the user to control crypto-->
+<!--rate/mix of selection-->
+<!--</button>-->
+<!--<div id="myDIV1332" class="colors" style="display: none">-->
+<!--</div>-->
+<p>
+    <button onclick="myFunction134()" class="pure-button fuller-button blue">1.3.4. "execution" per crypto rate/mix:</button>
+<!--<div id="myDIV134" class="colors row" style="display: block">-->
+<div id="myDIV134" class="colors row" style="display: none">
+    <table style=" align-content: center ; width:100%">
+        <tr>
+            <th>100% Crypto with complex on-chain function</th>
+            <th>66% Crypto with complex off-chain function</th>
+        </tr>
+        <tr>
+            <td>
+                <label>
+        <textarea id="executeComputationTextArea100"  style="width: 400px"
+                  placeholder="Enter two numbers separated by space for multiplication"></textarea>
+                </label>
+                <button onclick="executeComputationCM100()">Execute Computation through blockchain</button>
+                <button onclick="resetComputationVariableCM100()">Reset computation variable</button>
+                <button onclick="getComputationVariableCM100()">Get computation variable value</button>
+                <br/>
+                <label>
+                    <textarea readonly>Input posted transaction</textarea>
+                    <a id="executeComputationHashTextAreaHref100" href="#" target="_blank"><textarea
+                            id="executeComputationHashTextArea100" style="width: 200px;"></textarea></a>
+                </label>
+                <br/>
+                <label>
+                    <textarea readonly>Input posted Block Number</textarea>
+                    <a id="executeComputationInputBlockNumberTextAreaHref100" href="#" target="_blank"><textarea
+                            id="executeComputationInputBlockNumberTextArea100" style="width: 200px;"></textarea></a>
+                </label>
+                <br/>
+                <label>
+                    <textarea readonly>Delta Block </textarea>
+                    <a id="executeComputationDeltaBlockTextAreaHref100" href="#" target="_blank"><textarea
+                            id="executeComputationDeltaBlockTextArea100" style="width: 200px;"></textarea></a>
+                </label>
+                <br/>
+                <!--<label>-->
+                    <!--<textarea readonly>Result posted transaction</textarea>-->
+                    <!--<a id="executeComputationResultHashTextAreaHref100" href="#" target="_blank"><textarea-->
+                            <!--id="executeComputationResultHashTextArea100" style="width: 200px;"></textarea></a>-->
+                <!--</label>-->
+            </td>
+            <td>
+                <label>
+        <textarea id="executeComputationTextArea66" style="width: 400px"
+                  placeholder="Enter any computation here in string format"></textarea>
+                </label>
+                <button onclick="executeComputationCM66()">Execute Computation through blockchain</button>
+                <button onclick="resetComputationVariableCM66()">Reset computation variable</button>
+                <button onclick="getComputationVariableCM66()">Get computation variable value</button>
+                <br/>
+                <label>
+                    <textarea readonly>Input posted transaction</textarea>
+                    <a id="executeComputationHashTextAreaHref66" href="#" target="_blank"><textarea
+                            id="executeComputationHashTextArea66" style="width: 200px;"></textarea></a>
+                </label>
+                <br/>
+                <label>
+                    <textarea readonly>Result posted transaction</textarea>
+                    <a id="executeComputationResultHashTextAreaHref66" href="#" target="_blank"><textarea
+                            id="executeComputationResultHashTextArea66" style="width: 200px;"></textarea></a>
+                </label>
+                <br/>
+                <label>
+                    <textarea readonly>Input posted Block Number</textarea>
+                    <a id="executeComputationInputBlockNumberTextAreaHref66" href="#" target="_blank"><textarea
+                            id="executeComputationInputBlockNumberTextArea66" style="width: 200px;"></textarea></a>
+                </label>
+                <br/>
+                <label>
+                    <textarea readonly>Result block Number</textarea>
+                    <a id="executeComputationResultBlockNumberTextAreaHref66" href="#" target="_blank"><textarea
+                            id="executeComputationResultBlockNumberTextArea66" style="width: 200px;"></textarea></a>
+                </label>
+                <br/>
+                <label>
+                    <textarea readonly>Delta Block </textarea>
+                    <a id="executeComputationDeltaBlockTextAreaHref66" href="#" target="_blank"><textarea
+                            id="executeComputationDeltaBlockTextArea66" style="width: 200px;"></textarea></a>
+                </label>
+            </td>
+        </tr>
+    </table>
+    <table style=" align-content: center ; width:100%">
+        <tr>
+            <th>100% Crypto with simple on-chain function</th>
+            <th>66% Crypto with simple off-chain function</th>
+        </tr>
+        <tr>
+            <td>
+                <label>
+        <textarea id="executeComputationTextArea100Normal" style="width: 400px"
+                  placeholder="Enter two numbers separated by space for multiplication"></textarea>
+                </label>
+                <button onclick="executeComputationCM100N()">Execute Computation through blockchain</button>
+                <button onclick="resetComputationVariableCM100N()">Reset computation variable</button>
+                <button onclick="getComputationVariableCM100N()">Get computation variable value</button>
+                <br/>
+                <label>
+                    <textarea readonly>Input posted transaction</textarea>
+                    <a id="executeComputationHashTextAreaHref100Normal" href="#" target="_blank"><textarea
+                            id="executeComputationHashTextArea100Normal" style="width: 200px;"></textarea></a>
+                </label>
+                <br/>
+                <label>
+                    <textarea readonly>Input posted Block Number</textarea>
+                    <a id="executeComputationInputBlockNumberTextAreaHref100Normal" href="#" target="_blank"><textarea
+                            id="executeComputationInputBlockNumberTextArea100Normal" style="width: 200px;"></textarea></a>
+                </label>
+                <br/>
+                <label>
+                    <textarea readonly>Delta Block </textarea>
+                    <a id="executeComputationDeltaBlockTextAreaHref100Normal" href="#" target="_blank"><textarea
+                            id="executeComputationDeltaBlockTextArea100Normal" style="width: 200px;"></textarea></a>
+                </label>
+                <br/>
+                <!--<label>-->
+                    <!--<textarea readonly>Result posted transaction</textarea>-->
+                    <!--<a id="executeComputationResultHashTextAreaHref100Normal" href="#" target="_blank"><textarea-->
+                            <!--id="executeComputationResultHashTextArea100Normal" style="width: 200px;"></textarea></a>-->
+                <!--</label>-->
+            </td>
+            <td>
+                <label>
+        <textarea id="executeComputationTextArea66Normal" style="width: 400px"
+                  placeholder="Enter any computation here in string format"></textarea>
+                </label>
+                <button onclick="executeComputationCM66N()">Execute Computation through blockchain</button>
+                <button onclick="resetComputationVariableCM66N()">Reset computation variable</button>
+                <button onclick="getComputationVariableCM66N()">Get computation variable value</button>
+                <br/>
+                <label>
+                    <textarea readonly>Input posted transaction</textarea>
+                    <a id="executeComputationHashTextAreaHref66Normal" href="#" target="_blank"><textarea
+                            id="executeComputationHashTextArea66Normal" style="width: 200px;"></textarea></a>
+                </label>
+                <br/>
+                <label>
+                    <textarea readonly>Result posted transaction</textarea>
+                    <a id="executeComputationResultHashTextAreaHref66Normal" href="#" target="_blank"><textarea
+                            id="executeComputationResultHashTextArea66Normal" style="width: 200px;"></textarea></a>
+                </label>
+
+                <br/>
+                <label>
+                    <textarea readonly>Input posted Block Number</textarea>
+                    <a id="executeComputationInputBlockNumberTextAreaHref66Normal" href="#" target="_blank"><textarea
+                            id="executeComputationInputBlockNumberTextArea66Normal" style="width: 200px;"></textarea></a>
+                </label>
+                <br/>
+                <label>
+                    <textarea readonly>Result block Number</textarea>
+                    <a id="executeComputationResultBlockNumberTextAreaHref66Normal" href="#" target="_blank"><textarea
+                            id="executeComputationResultBlockNumberTextArea66Normal" style="width: 200px;"></textarea></a>
+                </label>
+                <br/>
+                <label>
+                    <textarea readonly>Delta Block </textarea>
+                    <a id="executeComputationDeltaBlockTextAreaHref66Normal" href="#" target="_blank"><textarea
+                            id="executeComputationDeltaBlockTextArea66Normal" style="width: 200px;"></textarea></a>
+                </label>
+            </td>
+        </tr>
+    </table>
+</div>
+<!--<p>-->
+<!--<button onclick="myFunction1341()">1.3.4.1. the transaction of selection will be executed on each platform-->
+<!--controlled crypto rate/mix and post the results on a block-->
+<!--</button>-->
+<!--<div id="myDIV1341" class="colors" style="display: none">-->
+<!--</div>-->
+<!--<p>-->
+<!--<button onclick="myFunction1342()">1.3.4.2. the transaction of selection will be executed on the custom crypto-->
+<!--rate/mix and post the results on a block-->
+<!--</button>-->
+<!--<div id="myDIV1342" class="colors" style="display: none">-->
+<!--</div>-->
+<!--<p>-->
+<!--<button onclick="myFunction1343()">1.3.4.3. a “tracker function” will be added and executed during 1.3.4. and the-->
+<!--inputs for 1.3.5. will be read from the-->
+<!--tracker file 1.3.4. wrote, in which “contract address”, “function ID” (that use selected to execute a-->
+<!--transaction),-->
+<!--“current block#” (to see which earliest block# the transaction will be posted in, the earlier the faster is the-->
+<!--transaction ), and “gas fee” (a selection from the following 3, i.e., platform estimated gas fee, maximum gas-->
+<!--fee, or-->
+<!--(estimated - (max – estimated)).-->
+<!--</button>-->
+<!--<div id="myDIV1343" class="colors" style="display: none">-->
+<!--</div>-->
+<p>
+    <button onclick="myFunction135()" class="pure-button fuller-button blue">1.3.5. Transaction fee Analysis</button>
+<div id="myDIV135" class="colors" style="display: none">
+    <table style=" align-content: center ; width:100%">
+        <caption style="font-size: 2em;">Transaction fees</caption>
+        <tr>
+            <th>100% Crypto with complex on-chain function</th>
+            <th>66% Crypto with complex off-chain function</th>
+            <th>100% Crypto with simple on-chain function</th>
+            <th>66% Crypto with simple off-chain function</th>
+
+        </tr>
+        <tr>
+            <td>
+                <textarea id="gasFeeDetails100C" title="100C">
+
+                </textarea>
+            </td>
+            <td>
+                <textarea id="gasFeeDetails66C" title="66C">
+
+                </textarea>
+            </td>
+            <td>
+                <textarea id="gasFeeDetails100CN" title="100CN">
+
+                    </textarea>
+            </td>
+            <td>
+                <textarea id="gasFeeDetails66CN" title="66CN">
+
+                </textarea>
+            </td>
+        </tr>
+    </table>
+    <a href="https://bitinfocharts.com/comparison/ethereum-transactionfees.html" target="_blank">Average Transaction fee in Ethereum per day</a>
+    <br/>
+    <a href="https://bitinfocharts.com/comparison/ethereum-transactions.html" target="_blank">Average number of Ethereum transactions per day</a>
+</div>
+<p>
+<!--<p>-->
+    <!--<button onclick="myFunction136()" class="pure-button fuller-button blue">1.3.6. Execution time analysis by the number of blocks spanned</button>-->
+<!--<div id="myDIV136" class="colors" style="display: none">-->
+    <!---->
+<!--</div>-->
+<p>
+    <!--<p>-->
+    <!--<button onclick="myFunction135()">1.3.5. "blockchain analytics" engine:</button>-->
+    <!--<div id="myDIV135" class="colors" style="display: none">-->
+    <!--</div>-->
+    <!--<p>-->
+    <!--<button onclick="myFunction1350()">1.3.5.0. "users/developers manual about the interface to the analytics engine for-->
+    <!--blockchain downloading/" posted-->
+    <!--</button>-->
+    <!--<div id="myDIV1350" class="colors" style="display: none">-->
+    <!--</div>-->
+    <!--<p>-->
+    <!--<button onclick="myFunction1351()">1.3.5.1. perform analytics on the blockchain data for each transaction on each-->
+    <!--platform controlled crypto rate/mix and-->
+    <!--across multiple transactions searching for the "earliest block#" for a given "gas fee" (platform estimated gas-->
+    <!--fee,-->
+    <!--maximum gas fee, or (estimated - (max – estimated)); or searching for the "lowest gas fee" that to be tested by-->
+    <!--each-->
+    <!--platform controlled crypto rate/mix for a "target block#"-->
+    <!--</button>-->
+    <!--<div id="myDIV1351" class="colors" style="display: none">-->
+    <!--</div>-->
+    <!--<p>-->
+    <!--<button onclick="myFunction13511()">1.3.5.1.1. list up and sort the "block# / gas fee / crypto rate-mix" for the-->
+    <!--platform controlled crypto rate/mix's in an-->
+    <!--increasing order to make a recommendation for 1.3.4.1. with gas fee selected-->
+    <!--Search the transactions column for the transaction with the key “function ID” under each of the target "contract-->
+    <!--address" (i.e. each smart contract with one of the crypto rate/mix combinations) and then, record its block# for-->
+    <!--the-->
+    <!--given gas fee-->
+    <!--</button>-->
+    <!--<div id="myDIV13511" class="colors" style="display: none">-->
+    <!--</div>-->
+    <!--<p>-->
+    <!--<button onclick="myFunction13512()">1.3.5.1.2. list up and sort the "gas fee / block# / crypto rate-mix" for the-->
+    <!--platform controlled crypto rate/mix's in an-->
+    <!--increasing order to make a recommendation for 1.3.4.1. with block# selected-->
+    <!--Search the transactions column for the transaction with the key “function ID” under each of the target "contract-->
+    <!--address" (i.e. each smart contract with one of the crypto rate/mix combinations) and then, record its gas fee-->
+    <!--for the-->
+    <!--given block#-->
+    <!--</button>-->
+    <!--<div id="myDIV13512" class="colors" style="display: none">-->
+    <!--</div>-->
+    <!--<p>-->
+    <!--<button onclick="myFunction1352()">1.3.5.2. perform analytics on the blockchain data for each transaction on the-->
+    <!--custom crypto rate/mix, then display the-->
+    <!--expected block# and gas fee-->
+    <!--</button>-->
+    <!--<div id="myDIV1352" class="colors" style="display: none">-->
+    <!--</div>-->
+    <!--<p>-->
+    <!--<button onclick="myFunction136()">1.3.6. (optional) "further optimization" if not satisfied with the recommendation-->
+    <!--from 1.3.5.1. then perform a further-->
+    <!--"cusom crypto rate/mix optimization"; or perform steps 1.3.3.1, 1.3.4.1 and 1.3.5.1 and compare against the-->
+    <!--“custom”-->
+    <!--result and deploy with the “better one”-->
+    <!--</button>-->
+    <!--<div id="myDIV136" class="colors" style="display: none">-->
+    <!--</div>-->
+<p>
+    <button onclick="myFunction137()" class="pure-button fuller-button blue">1.3.6. "deploy" on the mainnet</button>
+<div id="myDIV137" class="colors" style="display: none">
+</div>
+<!--The reward/charge system will be controlled by the market supply/demand and competition. The more competitive the higher-->
+<!--price be set.Let the market evolve the platfrom and the ecosystem.-->
+
+<p  class="pure-button fuller-button red">2.0. “investment” or “donation” option (your payment will be taken into account as a vehicle for
+    investment or donation)</p>
+<p class="pure-button fuller-button white"> to be discussed with us </p>
+<p  class="pure-button fuller-button red">3.0. “advertiserments”</p>
+<p class="pure-button fuller-button white"> to be discussed with us </p>
+<p  class="pure-button fuller-button red">4.0. “feedback and comments”</p>
+</body>
+</html>
+
+<!--<asp:Button ID="savebtn" runat="server" OnClick="savebtn_Click" style="display:none" />-->
+
+<style>
+    button:focus { outline:0 !important; }
+    body {
+        background-color: #333;
+        color: #fff;
+        font-family: 'Roboto', Arial,serif;
+        /*padding: 10em;*/
+    }
+
+    .flex-grid-center {
+        display: flex;
+        justify-content: center;
+        margin: 5em 0;
+    }
+
+    .fuller-button {
+        color: black;
+        background: none;
+        border-radius: 0;
+        padding: .5em 1em;
+        /*letter-spacing: 0.15em;*/
+        font-size: 0.8em;
+        transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+        /*margin: 1em;*/
+        box-shadow: inset 0 0 1em rgba(0, 170, 170, 0.5), 0 0 1em rgba(0, 170, 170, 0.5);
+        border: #0dd solid 2px;
+    }
+    .fuller-button.blue {
+        box-shadow: inset 0 0 1em rgba(0, 170, 170, 0.5), 0 0 1em rgba(0, 170, 170, 0.5);
+        border: #0dd solid 2px;
+    }
+    .fuller-button.blue:hover {
+        background-color: #0dd;
+        box-shadow: inset 0 0 0 rgba(0, 170, 170, 0.5), 0 0 1.5em rgba(0, 170, 170, 0.7);
+    }
+    .fuller-button.red {
+        box-shadow: inset 0 0 1em rgba(251, 81, 81, 0.4), 0 0 1em rgba(251, 81, 81, 0.4);
+        font-size: 1em;
+        border: #fb5454 solid 2px;
+    }
+    .fuller-button.red:hover {
+        background-color: #fb5454;
+        box-shadow: inset 0 0 0 rgba(251, 81, 81, 0.4), 0 0 1.5em rgba(251, 81, 81, 0.6);
+    }
+    .fuller-button.white {
+        box-shadow: inset 0 0 0.8em rgba(255, 255, 255, 0.3), 0 0 0.8em rgba(255, 255, 255, 0.3);
+        border: #fff solid 2px;
+    }
+    .fuller-button.white:hover {
+        color: rgba(0, 0, 0, 0.8);
+        background-color: #fff;
+        box-shadow: inset 0 0 0 rgba(255, 255, 255, 0.3), 0 0 1.2em rgba(255, 255, 255, 0.5);
+    }
+
+    .pure-control-group {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding: 0 1em 2.6em 1em;
+    }
+
+    .pure-form .pure-control-group label {
+        text-align: left;
+        position: absolute;
+        left: 0;
+        top: 15%;
+        z-index: 0;
+        letter-spacing: 0;
+        margin: 0 1em;
+    }
+
+    .pure-form .pure-control-group input {
+        background: none;
+        box-shadow: none;
+        padding-left: 0;
+        border-radius: 0;
+        border: none;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+        position: relative;
+        z-index: 1;
+        color: #fff;
+    }
+
+    .pure-form .pure-control-group input:focus {
+        border-bottom: 2px solid white;
+    }
+
+    .pure-form .pure-control-group textarea {
+        background: none;
+        box-shadow: none;
+        border-radius: 0;
+        border: none;
+        border-left: 2px solid rgba(255, 255, 255, 0.4);
+        resize: none;
+        height: 8em;
+        color: #fff;
+    }
+
+    .pure-form .pure-control-group textarea:focus {
+        border-left: 2px solid white;
+    }
+
+    .pure-form .pure-control-group input[type=email]:focus:invalid {
+        color: #fff;
+    }
+
+    .pure-form .pure-control-group input[type=email]:invalid {
+        color: #fb5454;
+    }
+
+    .pure-form button {
+        margin: 0.5em 1em;
+    }
+
+</style>
+
