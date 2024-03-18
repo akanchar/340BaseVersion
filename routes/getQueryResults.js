@@ -9,7 +9,7 @@ const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: 'ENTER YOUR PASSWORD FOR SQL DATABASE HERE',
-    database: 'ADVENTURER'
+    database: 'Kitchen'
 });
 
 router.post('/', (req, res) => {
