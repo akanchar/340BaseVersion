@@ -21,7 +21,7 @@ router.post('/', (req, res) => {
         } else {
             // Sending this query results back to the client.
             connection.query(
-                "SELECT * FROM Regions",
+                "SELECT * FROM Recipes",
                 function (err, rows) {
                     if (rows === undefined) {
 
@@ -29,7 +29,12 @@ router.post('/', (req, res) => {
                         console.log(rows)
                         text = ""
                         for (let i = 0; i < rows.length; i++) {
-                            text += rows[i].RegionName + "<br>";
+                            text += rows[i].recipedid + ","
+                            text += rows[i].recipename + ","
+                            text += rows[i].recipeImage + ","
+                            text += rows[i].recipeRating + ","
+                            text += rows[i].ingredients + ","
+                            text += "\n";
                         }
                         return res.end(text);
                     }
